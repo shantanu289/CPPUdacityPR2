@@ -11,7 +11,7 @@ using std::string;
 string Format::ElapsedTime(long seconds) {
     long hours = seconds / 3600;
     long mins = (seconds / 60) - (hours*60);
-    long secs = seconds - (mins*60);
+    long secs = seconds - (mins*60) - (hours*3600);
     std::string hms = std::to_string(hours) + ":" + std::to_string(mins) + ":" + std::to_string(secs);
     return hms;
 }
